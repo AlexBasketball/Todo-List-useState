@@ -6,7 +6,6 @@ import { FaRegTrashAlt } from "react-icons/fa";
 function App() {
   const [todos, setTodos] = useState([]);
   const [allTodos, setAllTodos] = useState(0);
-  const [completedTodo, setCompletedTodo] = useState(0);
 
   const putTodo = (value) => {
     if (value) {
@@ -45,7 +44,9 @@ function App() {
         {todos.map((todo) => {
           return (
             <li
-              className={todo.done ? styles.item && styles.done : styles.item}
+              className={
+                todo.done ? `${styles.item} ${styles.done}` : styles.item
+              }
               key={todo.id}
               onClick={() => toggleTodo(todo.id)}
             >
@@ -63,7 +64,6 @@ function App() {
       </ul>
       <div className={styles.completed}>
         <span>Все дела: {allTodos}</span>
-        <span>Выполнено: {completedTodo}</span>
       </div>
       <button className={styles.btn} onClick={removeAllTodos}>
         Удалить все дела

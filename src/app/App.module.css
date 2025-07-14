@@ -40,21 +40,28 @@
   border-radius: 8px;
   filter: drop-shadow(3px 1px 4px #222);
   cursor: pointer;
+  transition: border 0.2s ease;
+}
+
+.item:focus {
+  border: 1px solid #222;
+}
+.item:active {
+  border: 1px solid #222;
 }
 
 .done {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 15px;
-  border: 1px solid #f9f9f9;
-  background-color: #f9f9f9;
-  border-radius: 8px;
   filter: drop-shadow(3px 1px 4px #7fc95f);
   text-decoration: line-through;
   cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.done:focus {
+  border: 1px solid #7fc95f;
+}
+.done:active {
+  border: 1px solid #7fc95f;
 }
 
 .completed {
@@ -82,6 +89,9 @@
   border: 1px solid #535bf2;
 }
 .btn:focus {
+  border: 1px solid #646cff;
+}
+.btn:active {
   border: 1px solid #646cff;
 }
 
