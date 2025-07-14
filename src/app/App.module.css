@@ -26,6 +26,7 @@
   margin-bottom: 15px;
   gap: 15px;
   list-style: none;
+  background-color: transparent;
 }
 
 .item {
@@ -55,13 +56,6 @@
   text-decoration: line-through;
   cursor: pointer;
   transition: filter 0.2s ease;
-}
-
-.done:focus {
-  border: 1px solid #7fc95f;
-}
-.done:active {
-  border: 1px solid #7fc95f;
 }
 
 .completed {
